@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+    height:100%;
+    width:100%;
+    font-size:1.2rem;
+}
+main{
+    background-color: rgb(0, 16, 26);
+    height:100%;
+    width:100%;
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr;
+    grid-template-areas: "header"
+                        "section"
+                        "footer";
+                        overflow: hidden;
+}
+main header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    grid-area: header;
+    padding:1%;
+}
+main header .header-left{
+    width:70%;
+    display:flex;
+    justify-content: start;
+    align-items:center;
+    gap:4%;
+}
+main header .header-left h1{
+    font-size:1.5rem;
+    display:flex;
+    align-items: baseline;
+    gap:4%;
+}
+main header .header-left nav{
+    width:100%;
+}
+main header .header-left nav ul{
+    display:flex;
+    justify-content: start;
+    align-items:center;
+    gap:2%;
+}
+main header .header-left nav ul li{
+    text-align: none;
+    list-style: none;
+    font-size: 1rem;
+    transition: all 0.1s ease-in;
+}
+main header .header-left nav ul li:hover{
+    cursor:pointer;
+}
+main header .header-left nav ul li:active{
+    transform:scale(1.1);
+    font-weight: bold;
+}
+main header button{
+    padding:0.5% 1%;
+    font-size:1rem;
+    font-weight:400;
+    border-radius: 8px;
+    color:black;
+    background-color:white;
+}
+section{
+    height:70vh;
+        grid-area: section;
+        color:white;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows:1fr 1fr 4fr;
+        grid-template-areas:"main-text main-text main-text"
+                            "explanation explanation explanation"
+                            "images images images";
+}
+section h2{
+    grid-area: main-text;
+    font-size: 3rem;
+    padding-top:2%;
+    text-align: center;
+}
+section p{
+    grid-area: explanation;
+    font-size: 1rem;
+    padding:2% 30% ;
+    text-align: center;
+}
+section div{
+    grid-area: images;
+    display:flex;
+    padding:1%;
+    gap:2%;
+}
+section .img-container img{
+    height:15%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 25px;
+    object-position: center;
+}
+footer{
+    grid-area: footer;
+}
+footer h3{
+    color:white;
+    text-align: center;
+    font-weight: 400;
+    padding:1% 5%
+}
